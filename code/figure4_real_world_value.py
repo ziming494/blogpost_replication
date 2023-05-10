@@ -93,19 +93,19 @@ def plot_wallet_to_wallet():
     ax.yaxis.grid(False)
 
     bars = plt.bar(
-        ["USDC Wallet to Wallet", "Cross-boarder trade to FX", "GDP to Fedwire"],
-        [usdc, cross_boarder_trade_to_fx, gdp_to_fedwire],
+        ["Cross-boarder trade to FX", "GDP to Fedwire", "USDC Wallet to Wallet"],
+        [cross_boarder_trade_to_fx, gdp_to_fedwire, usdc],
         width=0.75,
     )
-    bars[0].set_color("#2775ca")
+    bars[0].set_color("#c7c5d1")
     bars[1].set_color("#c7c5d1")
-    bars[2].set_color("#c7c5d1")
+    bars[2].set_color("#2775ca")
 
     ax.set_xticklabels(
         [
-            "USDC*",
             "Global Trade / \n Foreign Exchange Volume",
             "U.S. GDP / \n Fedwire Volume",
+            "USDC*",
         ],
         fontsize=30,
         font="Proxima Nova",

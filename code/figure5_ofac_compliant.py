@@ -36,14 +36,18 @@ def plot_sanction_compliant():
     ax.yaxis.grid(False)
 
     bars = plt.bar(
-        ["USDC", "U.S. Dollar (M2)"],
-        [usdc_ofac_tracable, usd_ofac_tracable],
+        ["U.S. Dollar (M2)", "USDC"],
+        [usd_ofac_tracable, usdc_ofac_tracable],
         width=0.75,
     )
-    bars[0].set_color("#2775ca")
-    bars[1].set_color("#c7c5d1")
+    bars[0].set_color("#c7c5d1")
+    bars[1].set_color("#2775ca")
 
-    ax.set_xticklabels(["USDC", "U.S. Dollar (M2)"], fontsize=30, font="Proxima Nova")
+    ax.set_xticklabels(
+        ["U.S. Dollar (M2)", "USDC"],
+        fontsize=30,
+        font="Proxima Nova",
+    )
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
