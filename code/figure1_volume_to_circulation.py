@@ -116,8 +116,8 @@ def plot_speculative_ratio(start_date, end_date):
         width=0.75,
     )
     bars[0].set_color("#2775ca")
-    bars[1].set_color("#d5e3ff")
-    bars[2].set_color("#90d2ff")
+    bars[1].set_color("#c7c5d1")
+    bars[2].set_color("#c7c5d1")
     bars[3].set_color("#c7c5d1")
     ax.set_xticklabels(
         ["USDC", "U.S. Dollar\n(M2)", "Retail\nBrokerage", "Trading\nStablecoins"],
