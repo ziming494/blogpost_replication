@@ -1,0 +1,40 @@
+Fields,Value,As_of,Description ,Source
+schwab_dats,5925,2022-12-31,Includes daily average revenue trades by clients; trades by clients in asset-based pricing relationships; and all commission-free trades in thousands for the year,https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10k_2022.pdf
+schwab_dats,6507,2021-12-31,Includes daily average revenue trades by clients; trades by clients in asset-based pricing relationships; and all commission-free trades in thousands for the year,https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10k_2022.pdf
+schwab_dats,2603,2020-12-31,Includes daily average revenue trades by clients; trades by clients in asset-based pricing relationships; and all commission-free trades in thousands for the year,https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10k_2022.pdf
+avg_retail_trade_size,8000,2021-04-29,Average off-exchange retail trade size calculated by Nasdaq Chief Economist,https://www.nasdaq.com/articles/a-deep-dive-into-dark-trades-2021-04-29
+schwab_bda,147273,2022-12-31,Clients’ uninvested cash balances held off-balance sheet in deposit accounts at unconsolidated third-party financial institutions; pursuant to the IDA agreement and agreements with other third-party financial institutions. Average BDA balances represent the daily average balance in millions at year end,https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10k_2022.pdf
+schwab_bda,158434,2021-12-31,Clients’ uninvested cash balances held off-balance sheet in deposit accounts at unconsolidated third-party financial institutions; pursuant to the IDA agreement and agreements with other third-party financial institutions. Average BDA balances represent the daily average balance in millions at year end,https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10k_2022.pdf
+schwab_bda,163500,2020-12-31,Clients’ uninvested cash balances held off-balance sheet in deposit accounts at unconsolidated third-party financial institutions; pursuant to the IDA agreement and agreements with other third-party financial institutions. Average BDA balances represent the daily average balance in millions at year end,https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10k_2021.pdf
+usd_denominated_fx_spot_and_forward_volume,2800396,2022-04-30,Daily average value of FX spot and forward volume in millions for the month,https://stats.bis.org/statx/srs/table/d11.1?p=2022&c=
+usd_denominated_fx_spot_and_forward_volume,2560939,2019-04-30,Daily average value of FX spot and forward volume in millions for the month,https://stats.bis.org/statx/srs/table/d11.1?p=2019&c=
+us_equity_volume,555.4,2023-03-31,Daily average trading volume in billions for the month,https://www.sifma.org/resources/research/us-equity-and-related-securities-statistics/
+us_equity_volume,526.3,2023-02-28,Daily average trading volume in billions for the month,https://www.sifma.org/resources/research/us-equity-and-related-securities-statistics/
+us_equity_volume,480,2023-01-31,Daily average trading volume in billions for the month,https://www.sifma.org/resources/research/us-equity-and-related-securities-statistics/
+us_equity_volume,573.1,2022-12-31,Daily average trading volume in billions for the year,https://www.sifma.org/resources/research/us-equity-and-related-securities-statistics/
+us_equity_volume,564.7,2021-12-31,Daily average trading volume in billions for the year,https://www.sifma.org/resources/research/us-equity-and-related-securities-statistics/
+us_equity_volume,479.4,2020-12-31,Daily average trading volume in billions for the year,https://www.sifma.org/resources/research/us-equity-and-related-securities-statistics/
+us_fixed_income_volume,1038.7,2023-03-31,Daily average trading volume in billions for the month,https://www.sifma.org/resources/research/us-fixed-income-securities-statistics/
+us_fixed_income_volume,998,2023-02-28,Daily average trading volume in billions for the month,https://www.sifma.org/resources/research/us-fixed-income-securities-statistics/
+us_fixed_income_volume,950.2,2023-01-31,Daily average trading volume in billions for the month,https://www.sifma.org/resources/research/us-fixed-income-securities-statistics/
+us_fixed_income_volume,913.2,2022-12-31,Daily average trading volume in billions for the year,https://www.sifma.org/resources/research/us-fixed-income-securities-statistics/
+us_fixed_income_volume,955.2,2021-12-31,Daily average trading volume in billions for the year,https://www.sifma.org/resources/research/us-fixed-income-securities-statistics/
+us_fixed_income_volume,954.3,2020-12-31,Daily average trading volume in billions for the year,https://www.sifma.org/resources/research/us-fixed-income-securities-statistics/
+fedwire_volume,4241029,2022-12-31,Daily average value of transfer in millions for the year,https://www.frbservices.org/resources/financial-services/wires/volume-value-stats/annual-stats.html
+fedwire_volume,3935756,2021-12-31,Daily average value of transfer in millions for the year,https://www.frbservices.org/resources/financial-services/wires/volume-value-stats/annual-stats.html
+fedwire_volume,3322067,2020-12-31,Daily average value of transfer in millions for the year,https://www.frbservices.org/resources/financial-services/wires/volume-value-stats/annual-stats.html
+fedwire_volume,2772252,2019-12-31,Daily average value of transfer in millions for the year,https://www.frbservices.org/resources/financial-services/wires/volume-value-stats/annual-stats.html
+fx_volume,7505992,2022-04-30,Daily average value of FX volume in millions for the month,https://stats.bis.org/statx/srs/table/d11.1?p=2022&c=
+fx_volume,6581024,2019-04-30,Daily average value of FX volume in millions for the month,https://stats.bis.org/statx/srs/table/d11.1?p=2019&c=
+global_goods_trade,24904588,2022-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=101
+global_goods_trade,22343929,2021-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=101
+global_goods_trade,17648374,2020-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=101
+global_goods_trade,19014257,2019-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=101
+global_services_trade,7165313,2022-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=103970
+global_services_trade,6215017,2021-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=103970
+global_services_trade,5233483,2020-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=103970
+global_services_trade,6314820,2019-12-31,Annual value in millions,https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=103970
+usdc_wallet2wallet_transfer,0.1181,2023-03-31,"Percentage of USDC wallet to wallet transfers, excluding smart contracts, exchange wallets and deposit addresses from inception to 2023-03-31",BigQuery under SQL folder of this repo
+usdc_ofac_compliant,1,2023-03-31,Fraction of USDC circulation that is sanctionable by OFAC,USDC Contract: https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code
+usd_m2_march_2023,20983.8,2023-03-31,Latest M2 in billions,https://www.federalreserve.gov/releases/h6/current/default.htm
+usd_currcir_march_2023,2312.6,2023-03-31,Latest currency in circulation in billions,https://www.federalreserve.gov/releases/h6/current/default.htm
