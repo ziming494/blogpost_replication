@@ -127,14 +127,14 @@ def plot_debt_to_circulation(start_date, end_date):
     ax.yaxis.grid(False)
 
     bars = plt.bar(
-        ["USDC Borrowing /n Circulation", "Repo Borrowing /n M2"],
+        ["USDC Borrowing /n Circulation", "Repo Borrowing /n U.S. Dollar (M2)"],
         [usdc_debt_to_mktcap_ratio, m2_ratio],
         width=0.75,
     )
     bars[0].set_color("#2775ca")
     bars[1].set_color("#c7c5d1")
     ax.set_xticklabels(
-        ["USDC Borrowing /\nCirculation", "Repo Borrowing /\nM2"],
+        ["USDC Borrowing /\nCirculation", "Repo Borrowing /\nU.S. Dollar (M2)"],
         fontsize=30,
         font="Proxima Nova",
     )
