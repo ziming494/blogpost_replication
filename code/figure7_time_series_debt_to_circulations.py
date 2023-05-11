@@ -60,6 +60,9 @@ def plot_ts_debt_to_circulation(start_date, end_date):
         usdc_debt_to_mktcap_ratio, how="left", left_index=True, right_index=True
     )
     combined = combined[["repo_m2_ratio", "usdc_debt_to_mktcap"]]
+    combined.rename(
+        columns={"usdc_debt_to_mktcap": "USDC", "repo_m2_ratio": "repo"}, inplace=True
+    )
     resampled_combined = combined.resample("Y").mean()
     resampled_combined.index = resampled_combined.index.year
     print(resampled_combined)
@@ -78,7 +81,6 @@ def plot_ts_debt_to_circulation(start_date, end_date):
         color=["#c7c5d1", "#2775ca"],
         width=0.75,
         legend=True,
-        xlabel="Year",
     )
 
     ax.spines["top"].set_visible(False)
@@ -86,7 +88,8 @@ def plot_ts_debt_to_circulation(start_date, end_date):
 
     ax.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
     ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=25, font="Proxima Nova")
-    # plt.show()
+    plt.xticks(rotation=0, fontsize=30)
+    ax.legend(fontsize=30, loc="upper left")
     plt.savefig("../output/Figure7.png", format="png", dpi=300, bbox_inches="tight")
 
 
