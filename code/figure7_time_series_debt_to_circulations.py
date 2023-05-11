@@ -75,10 +75,12 @@ def plot_ts_debt_to_circulation(start_date, end_date):
     ax.xaxis.grid(False)
     ax.yaxis.grid(False)
 
+    color_dict = {"USDC": "#2775ca", "Repo": "#c7c5d1"}
+    resampled_combined = resampled_combined[["USDC", "Repo"]]
     bars = resampled_combined.plot(
         kind="bar",
         ax=ax,
-        color=["#c7c5d1", "#2775ca"],
+        color=list(color_dict.values()),
         width=0.75,
         legend=True,
     )
