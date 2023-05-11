@@ -98,7 +98,7 @@ def plot_speculative_ratio(start_date, end_date):
         / (usd_df["WM2NS"] * 1e9)
     ).mean()
     # plot bar graph
-    figure(figsize=(16, 12), dpi=300)
+    figure(figsize=(18, 12), dpi=300)
 
     ax = plt.axes()
     ax.set_axisbelow(True)

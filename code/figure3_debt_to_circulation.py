@@ -119,7 +119,7 @@ def plot_debt_to_circulation(start_date, end_date):
     print(m2_ratio, usdc_debt_to_mktcap_ratio)
 
     # Plot bar graph
-    figure(figsize=(16, 12), dpi=300)
+    figure(figsize=(18, 12), dpi=300)
 
     ax = plt.axes()
     ax.set_axisbelow(True)
