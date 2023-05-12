@@ -58,7 +58,7 @@ def plot_ts_speculative_ratio(
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     plt.xticks(rotation=0, fontsize=10)
-    plt.legend(loc="upper right", fontsize=10, frameon=False)
+    plt.legend(loc="best", fontsize=10, frameon=False)
 
     plt.savefig("../output/Figure_specratio_ts.pdf", bbox_inches="tight")
 
