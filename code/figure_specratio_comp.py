@@ -130,10 +130,10 @@ def plot_speculative_ratio(start_date, end_date):
     plt.yticks(
         [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2],
         labels=["0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2"],
-        fontsize=6,
+        fontsize=8,
         font="Proxima Nova",
     )
-    plt.xticks(rotation=0, fontsize=6)
+    plt.xticks(rotation=10, fontsize=8)
     plt.savefig("../output/Figure_specratio_comp.pdf", bbox_inches="tight")
 
 

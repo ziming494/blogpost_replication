@@ -111,9 +111,9 @@ def plot_circulation_corr(start_date, end_date):
     ax.spines["right"].set_visible(False)
 
     ax.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
-    ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=6, font="Proxima Nova")
+    ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=8, font="Proxima Nova")
 
-    plt.xticks(rotation=0, fontsize=6)
+    plt.xticks(rotation=10, fontsize=8)
 
     plt.savefig("../output/Figure_corr_comp.pdf", bbox_inches="tight")
 

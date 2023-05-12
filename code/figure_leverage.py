@@ -96,6 +96,7 @@ def read_lending_pool_data():
     )
 
     usdc_lendingpool = lending_pool.loc[lending_pool["symbol"] == "USDC"]
+    usdc_lendingpool.sort_values(by=["symbol", "ds"], inplace=True)
     return usdc_lendingpool
 
 

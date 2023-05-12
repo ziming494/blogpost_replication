@@ -49,6 +49,7 @@ def plot_ts_debt_to_circulation(start_date, end_date):
         .rename(columns={"index": "ds"})
     )
     usdc_lendingpool = read_lending_pool_data()
+    # print(usdc_lendingpool)
     usdc_lending = usdc_data.merge(usdc_lendingpool, how="left", on=["ds"])
     usdc_lending["usdc_debt_to_mktcap"] = (
         usdc_lending["debt_outstanding"] / usdc_lending["USDC_market_cap"]
@@ -67,7 +68,6 @@ def plot_ts_debt_to_circulation(start_date, end_date):
     resampled_combined.index = resampled_combined.index.year
 
     # Plot bar graph
-    figure(figsize=(4, 3))
 
     ax = plt.axes()
     ax.set_axisbelow(True)
@@ -80,8 +80,8 @@ def plot_ts_debt_to_circulation(start_date, end_date):
         kind="bar",
         ax=ax,
         color=list(color_dict.values()),
-        width=0.75,
         legend=True,
+        figsize=(4, 3),
     )
 
     ax.spines["top"].set_visible(False)
@@ -89,6 +89,7 @@ def plot_ts_debt_to_circulation(start_date, end_date):
 
     ax.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
     ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=10, font="Proxima Nova")
+
     plt.xticks(rotation=0, fontsize=10)
     plt.legend(loc="best", fontsize=10, frameon=False)
     plt.savefig("../output/Figure_leverage_ts.pdf", bbox_inches="tight")
@@ -96,6 +97,6 @@ def plot_ts_debt_to_circulation(start_date, end_date):
 
 if __name__ == "__main__":
     plot_ts_debt_to_circulation(
-        start_date=datetime.datetime(2020, 12, 2),
+        start_date=datetime.datetime(2020, 6, 15),
         end_date=datetime.datetime(2023, 3, 31),
     )

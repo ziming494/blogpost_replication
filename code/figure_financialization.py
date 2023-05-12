@@ -114,8 +114,8 @@ def plot_wallet_to_wallet():
     ax.spines["right"].set_visible(False)
 
     ax.set_yticks([0, 0.05, 0.1, 0.15])
-    ax.set_yticklabels([0, 0.05, 0.1, 0.15], fontsize=6, font="Proxima Nova")
-    plt.xticks(rotation=0, fontsize=6)
+    ax.set_yticklabels([0, 0.05, 0.1, 0.15], fontsize=7, font="Proxima Nova")
+    plt.xticks(rotation=10, fontsize=7)
     plt.savefig("../output/Figure_financialization.pdf", bbox_inches="tight")
 
 
