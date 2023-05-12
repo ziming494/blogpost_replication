@@ -24,35 +24,17 @@ def plot_ts_speculative_ratio(
     ts_data["ts_market_cap"] = ts_data["USDT_market_cap"] + ts_data["BUSD_market_cap"]
     ts_data["ts_volume"] = ts_data["USDT_volume"] + ts_data["BUSD_volume"]
 
-    # Calculate to ratio and resample to monthly
-    dryT = (
-        pd.DataFrame(
-            {"Trading Stablecoins": (ts_data["ts_volume"]) / (ts_data["ts_market_cap"])}
-        )
-        .resample("Y", label="left")
-        .mean()
-    )
-
-    dryT = dryT.loc[datetime.datetime(2019, 1, 1) :]
-    dryT.index = dryT.index.year
-    dryT.name = "Trading Stablecoins"
-
-    dry = (
-        (usdc_data["USDC_volume"] / usdc_data["USDC_market_cap"])
-        .resample("Y", label="left")
-        .mean()
-    )
-    dry = dry.loc[datetime.datetime(2019, 1, 1) :]
-    dry.index = dry.index.year
-    dry.name = "USDC"
+    ts_data=ts_data.merge(usdc_data,left_index=True,right_index=True, how='outer')
+    dtplot=ts_data.resample('Y').mean().assign(Trading_Stablecoins=lambda x: x.ts_volume/x.ts_market_cap,
+                                    USDC=lambda x:x.USDC_volume/x.USDC_market_cap)
+    dtplot.index=dtplot.index.year
+    combined=dtplot[['USDC','Trading_Stablecoins']].rename(columns={'Trading_Stablecoins':'Trading Stablecoins'})
 
     figure(figsize=(18, 12), dpi=300)
     ax = plt.axes()
     ax.set_axisbelow(True)
     ax.xaxis.grid(False)
     ax.yaxis.grid(False)
-
-    combined = pd.concat([dry, dryT], axis=1)
 
     color_dict = {"USDC": "#2775ca", "Trading Stablecoins": "#c7c5d1"}
     combined = combined[["USDC", "Trading Stablecoins"]]
@@ -71,6 +53,7 @@ def plot_ts_speculative_ratio(
     plt.legend(bbox_to_anchor=(0.5, -0.05), loc="upper center", ncol=2, fontsize=30)
 
     plt.savefig("../output/Figure6.png", bbox_inches="tight")
+    plt.show()
 
 
 if __name__ == "__main__":
