@@ -28,7 +28,7 @@ def plot_sanction_compliant():
     usd_ofac_tracable = (usd_m2 - usd_currcir) / usd_m2
 
     # Plot bar graph
-    figure(figsize=(18, 12), dpi=300)
+    figure(figsize=(4, 3))
 
     ax = plt.axes()
     ax.set_axisbelow(True)
@@ -45,7 +45,7 @@ def plot_sanction_compliant():
 
     ax.set_xticklabels(
         ["U.S. Dollar (M2)", "USDC"],
-        fontsize=30,
+        fontsize=10,
         font="Proxima Nova",
     )
 
@@ -55,10 +55,14 @@ def plot_sanction_compliant():
     ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
     ax.set_yticklabels(
         ["0", "20%", "40%", "60%", "80%", "100%"],
-        fontsize=25,
+        fontsize=10,
         font="Proxima Nova",
     )
-    plt.savefig("../output/Figure5.png", format="png", dpi=300, bbox_inches="tight")
+    plt.xticks(rotation=0, fontsize=10)
+    plt.xticks(fontsize=10)
+    plt.legend(loc="upper right", fontsize=10, frameon=False)
+
+    plt.savefig("../output/Figure_transparency.pdf", bbox_inches="tight")
 
 
 if __name__ == "__main__":

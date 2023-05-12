@@ -65,10 +65,9 @@ def plot_ts_debt_to_circulation(start_date, end_date):
     )
     resampled_combined = combined.resample("Y").mean()
     resampled_combined.index = resampled_combined.index.year
-    print(resampled_combined)
+
     # Plot bar graph
-    # Plot bar graph
-    figure(figsize=(18, 12), dpi=300)
+    figure(figsize=(4, 3))
 
     ax = plt.axes()
     ax.set_axisbelow(True)
@@ -89,11 +88,11 @@ def plot_ts_debt_to_circulation(start_date, end_date):
     ax.spines["right"].set_visible(False)
 
     ax.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
-    ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=25, font="Proxima Nova")
-    plt.xticks(rotation=0, fontsize=30)
-    # ax.legend(fontsize=30, loc="upper left")
-    plt.legend(bbox_to_anchor=(0.5, -0.05), loc="upper center", ncol=2, fontsize=30)
-    plt.savefig("../output/Figure7.png", format="png", dpi=300, bbox_inches="tight")
+    ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=10, font="Proxima Nova")
+    plt.xticks(rotation=0, fontsize=10)
+    plt.xticks(fontsize=10)
+    plt.legend(loc="upper right", fontsize=10, frameon=False)
+    plt.savefig("../output/Figure_leverage_ts.pdf", bbox_inches="tight")
 
 
 if __name__ == "__main__":

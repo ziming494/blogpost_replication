@@ -24,11 +24,19 @@ def plot_ts_speculative_ratio(
     ts_data["ts_market_cap"] = ts_data["USDT_market_cap"] + ts_data["BUSD_market_cap"]
     ts_data["ts_volume"] = ts_data["USDT_volume"] + ts_data["BUSD_volume"]
 
-    ts_data=ts_data.merge(usdc_data,left_index=True,right_index=True, how='outer')
-    dtplot=ts_data.resample('Y').mean().assign(Trading_Stablecoins=lambda x: x.ts_volume/x.ts_market_cap,
-                                    USDC=lambda x:x.USDC_volume/x.USDC_market_cap)
-    dtplot.index=dtplot.index.year
-    combined=dtplot[['USDC','Trading_Stablecoins']].rename(columns={'Trading_Stablecoins':'Trading\nStablecoins'})
+    ts_data = ts_data.merge(usdc_data, left_index=True, right_index=True, how="outer")
+    dtplot = (
+        ts_data.resample("Y")
+        .mean()
+        .assign(
+            Trading_Stablecoins=lambda x: x.ts_volume / x.ts_market_cap,
+            USDC=lambda x: x.USDC_volume / x.USDC_market_cap,
+        )
+    )
+    dtplot.index = dtplot.index.year
+    combined = dtplot[["USDC", "Trading_Stablecoins"]].rename(
+        columns={"Trading_Stablecoins": "Trading\nStablecoins"}
+    )
 
     figure(figsize=(4, 3))
     ax = plt.axes()
@@ -37,23 +45,24 @@ def plot_ts_speculative_ratio(
     ax.yaxis.grid(False)
 
     color_dict = {"USDC": "#2775ca", "Trading Stablecoins": "#c7c5d1"}
-    #combined = combined[["USDC", "Trading Stablecoins"]]
+    # combined = combined[["USDC", "Trading Stablecoins"]]
 
     combined.plot(
         kind="bar",
         ax=ax,
         color=list(color_dict.values()),
         width=0.75,
-        legend=True,label=['USDdC','Trading/nStablecoins']
+        legend=True,
+        label=["USDC", "Trading/nStablecoins"],
     )
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    plt.xticks(rotation=45, fontsize=10)
+    plt.xticks(rotation=0, fontsize=10)
     plt.xticks(fontsize=10)
-    plt.legend(loc='upper right', fontsize=10,frameon=False)
+    plt.legend(loc="upper right", fontsize=10, frameon=False)
 
-    plt.savefig("../output/Figure6.pdf", bbox_inches="tight")
-    
+    plt.savefig("../output/Figure_specratio_ts.pdf", bbox_inches="tight")
+
 
 if __name__ == "__main__":
     plot_ts_speculative_ratio()
