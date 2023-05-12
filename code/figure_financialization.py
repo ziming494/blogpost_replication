@@ -85,7 +85,7 @@ def plot_wallet_to_wallet():
     ).mean()
 
     # Plot bar graph
-    figure(figsize=(18, 12), dpi=300)
+    figure(figsize=(4, 3))
 
     ax = plt.axes()
     ax.set_axisbelow(True)
@@ -107,7 +107,6 @@ def plot_wallet_to_wallet():
             "U.S. GDP / \n Fedwire Volume",
             "USDC*",
         ],
-        fontsize=30,
         font="Proxima Nova",
     )
 
@@ -115,8 +114,9 @@ def plot_wallet_to_wallet():
     ax.spines["right"].set_visible(False)
 
     ax.set_yticks([0, 0.05, 0.1, 0.15])
-    ax.set_yticklabels([0, 0.05, 0.1, 0.15], fontsize=25, font="Proxima Nova")
-    plt.savefig("../output/Figure4.png", format="png", dpi=300, bbox_inches="tight")
+    ax.set_yticklabels([0, 0.05, 0.1, 0.15], fontsize=6, font="Proxima Nova")
+    plt.xticks(rotation=0, fontsize=6)
+    plt.savefig("../output/Figure_financialization.pdf", bbox_inches="tight")
 
 
 if __name__ == "__main__":

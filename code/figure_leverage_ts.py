@@ -9,7 +9,7 @@ from matplotlib.pyplot import figure
 # Create a api_key.py file in the same directory and add your CMC API key
 from api_key import CMC_API_KEY
 from utils import fetch_cmc_data
-from figure3_debt_to_circulation import (
+from code.figure_leverage import (
     fetch_repo_market_data,
     read_lending_pool_data,
 )
@@ -90,7 +90,6 @@ def plot_ts_debt_to_circulation(start_date, end_date):
     ax.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
     ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=10, font="Proxima Nova")
     plt.xticks(rotation=0, fontsize=10)
-    plt.xticks(fontsize=10)
     plt.legend(loc="upper right", fontsize=10, frameon=False)
     plt.savefig("../output/Figure_leverage_ts.pdf", bbox_inches="tight")
 
