@@ -98,7 +98,7 @@ def plot_speculative_ratio(start_date, end_date):
         / (usd_df["WM2NS"] * 1e9)
     ).mean()
     # plot bar graph
-    figure(figsize=(18, 12), dpi=300)
+    figure(figsize=(4, 3))
 
     ax = plt.axes()
     ax.set_axisbelow(True)
@@ -121,7 +121,6 @@ def plot_speculative_ratio(start_date, end_date):
     bars[3].set_color("#c7c5d1")
     ax.set_xticklabels(
         ["USDC", "U.S. Dollar\n(M2)", "Retail\nBrokerage", "Trading\nStablecoins"],
-        fontsize=30,
         font="Proxima Nova",
     )
 
@@ -131,11 +130,11 @@ def plot_speculative_ratio(start_date, end_date):
     plt.yticks(
         [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2],
         labels=["0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2"],
-        fontsize=25,
+        fontsize=6,
         font="Proxima Nova",
     )
-    # plt.show()
-    plt.savefig("../output/Figure1.png", format="png", dpi=300, bbox_inches="tight")
+    plt.xticks(rotation=0, fontsize=6)
+    plt.savefig("../output/Figure_specratio_comp.pdf", bbox_inches="tight")
 
 
 if __name__ == "__main__":

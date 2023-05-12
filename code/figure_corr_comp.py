@@ -86,7 +86,7 @@ def plot_circulation_corr(start_date, end_date):
     )
 
     # plot bar graph
-    figure(figsize=(18, 12), dpi=300)
+    figure(figsize=(4, 3))
 
     ax = plt.axes()
     ax.set_axisbelow(True)
@@ -104,18 +104,18 @@ def plot_circulation_corr(start_date, end_date):
     bars[2].set_color("#c7c5d1")
     ax.set_xticklabels(
         ["USDC &\nBTC", "U.S. Dollar (M2) &\nS&P 500", "Trading Stablecoins &\nBTC"],
-        fontsize=30,
         font="Proxima Nova",
     )
-    # plt.ylabel("Pearson Correlation", fontsize=14, font="Proxima Nova")
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
     ax.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
-    ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=25, font="Proxima Nova")
+    ax.set_yticklabels([0, 0.05, 0.1, 0.15, 0.2], fontsize=6, font="Proxima Nova")
 
-    plt.savefig("../output/Figure2.png", format="png", dpi=300, bbox_inches="tight")
+    plt.xticks(rotation=0, fontsize=6)
+
+    plt.savefig("../output/Figure_corr_comp.pdf", bbox_inches="tight")
 
 
 if __name__ == "__main__":
