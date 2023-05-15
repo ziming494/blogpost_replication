@@ -54,7 +54,6 @@ def plot_ts_speculative_ratio(
     ]
     df_yearly["DATE"] = pd.to_datetime(df_yearly["DATE"], format="%Y")
     # Change all dates to 1 for easy to plot purpose
-    # Assuming 'date' is your datetime column in the DataFrame 'df'
     df_yearly["DATE"] = pd.to_datetime(
         {
             "year": df_yearly["DATE"].dt.year,
