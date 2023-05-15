@@ -48,7 +48,7 @@ def plot_ts_speculative_ratio(
     )
     combined["year"] = combined.index.year
     combined_btc = btc_price_monthly.merge(combined, on="year", how="left")
-    print(combined_btc)
+
     df_yearly = combined_btc.loc[
         (combined_btc["DATE"].dt.month == 1) & (combined_btc["DATE"].dt.day == 31)
     ]
