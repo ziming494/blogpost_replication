@@ -1,4 +1,4 @@
-# Repo for replicating Circle blog post
+# Repo for replicating paper: Beyond Speculation: Payment Stablecoins for RTGS
 
 - Create a `api_key.py` file under `code` folder with a `CMC_API_KEY` variable that stores your CoinmarketCap API key.
 - Download historical data by going into `code` folder and run `python utils.py`. This will download historical market cap and volume data for USDC, USDT and BUSD and store under `data` folder.
