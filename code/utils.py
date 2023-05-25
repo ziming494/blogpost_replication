@@ -3,7 +3,7 @@ from api_key import CMC_API_KEY
 import pandas as pd
 
 
-def fetch_cmc_data(symbol):
+def download_cmc_data(symbol):
     url = "https://pro-api.coinmarketcap.com/v3/cryptocurrency/quotes/historical"
     params = {
         "symbol": "{}".format(symbol),
@@ -42,3 +42,19 @@ def fetch_cmc_data(symbol):
         return agg_data
     else:
         raise (f"Request failed with status code: {response.status_code}")
+
+
+def download_data():
+    symbol_list = ["USDC", "USDT", "BUSD"]
+    for symbol in symbol_list:
+        data = download_cmc_data(symbol)
+        data.to_csv(f"../data/{symbol}_data.csv")
+
+
+def fetch_cmc_data(symbol):
+    data = pd.read_csv(f"../data/{symbol}_data.csv", index_col=0, parse_dates=True)
+    return data
+
+
+if __name__ == "__main__":
+    download_data()
