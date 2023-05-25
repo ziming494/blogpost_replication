@@ -1,2 +1,5 @@
 api_key.py
+USDC_data.csv
+USDT_data.csv
+BUSD_data.csv
 __pycache__
